@@ -12,10 +12,6 @@ The repository is organized by LeetCode problem categories, making it easy to na
 
 Feel free to explore the folders and dive into the solutions. Each problem is accompanied by a detailed explanation in the code file itself.
 
-## Contributing
-
-If you find any issues with the solutions, have a more optimized solution, or want to add a new problem, feel free to contribute! Please follow the [contribution guidelines](CONTRIBUTING.md) to maintain consistency.
-
 ## Acknowledgments
 
 I would like to express my gratitude to the LeetCode community and all the contributors who have helped me enhance my problem-solving skills.
