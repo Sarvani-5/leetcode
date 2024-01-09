@@ -14,26 +14,25 @@
  * }
  */
 class Solution {
-    static int total = 0;
-    public void rec(TreeNode root,int low,int high){
-        if(root==null){
+    public static int sum = 0;
+    public static void calculateSum(TreeNode root, int low, int high){
+if (root == null) {
             return;
         }
-        if(root.val>=low && root.val<=high){
-            total+=root.val;
-            rec(root.left,low,high);
-            rec(root.right,low,high);
-        }
-        if(root.val<low){
-            rec(root.right,low,high);
-        }
-        else if(root.val>high){
-            rec(root.left,low,high);
+
+        if (root.val >= low && root.val <= high) {
+            sum += root.val;
+            calculateSum(root.left, low, high);
+            calculateSum(root.right, low, high);
+        } else if (root.val < low) {
+            calculateSum(root.right, low, high);
+        } else {
+            calculateSum(root.left, low, high);
         }
     }
     public int rangeSumBST(TreeNode root, int low, int high) {
-        total =0;
-        rec(root,low,high);
-        return total;
+        sum = 0;
+        calculateSum(root,low,high);
+        return sum;
     }
 }
